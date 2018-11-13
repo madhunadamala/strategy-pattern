@@ -1,0 +1,16 @@
+package designpatterns.strategypattern;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class StrategyPatternApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(StrategyPatternApplication.class, args);
+		Context context = new Context();
+		FileTypes fileType = FileTypes.pdf;
+		String a = context.GetFileType(fileType);
+		System.out.println(a);
+	}
+}
